@@ -28,6 +28,7 @@ test:
   imports:
     - pytermgui
     - pytermgui.widgets
+    - pytermgui.widgets.interactive
   commands:
     - pip check
     - ptg --help
