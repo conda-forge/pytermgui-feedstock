@@ -1,5 +1,5 @@
 {% set name = "pytermgui" %}
-{% set version = "3.2.0" %}
+{% set version = "3.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytermgui-{{ version }}.tar.gz
-  sha256: 37df8725e3e399a624483ae7e8de58765bdd7ea171ea3377ca5f1d4f5f0a2b25
+  sha256: cc344317df73bbb78a3e8217a56d0aeb755af6d7b17ea1af133bed65c13b82ad
 
 build:
   number: 0
