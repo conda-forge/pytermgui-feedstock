@@ -28,7 +28,7 @@ test:
   imports:
     - pytermgui
     - pytermgui.widgets
-    - pytermgui.widgets.interactive
+    - pytermgui.window_manager
   commands:
     - pip check
     - ptg --help
