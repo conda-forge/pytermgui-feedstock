@@ -19,10 +19,13 @@ build:
 
 requirements:
   host:
+    - hatchling
+    - hatch-fancy-pypi-readme
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - python >=3.7
+    - python >=3.8
+    - typing_extensions
 
 test:
   imports:
@@ -36,8 +39,8 @@ test:
     - pip
 
 about:
-  home: https://github.com/bczsalba/pytermgui
-  doc_url: ptg.bczsalba.com/pytermgui.html
+  home: https://ptg.bczsalba.com/
+  dev_url: https://github.com/bczsalba/pytermgui
   summary: A simple and robust terminal UI library, written in Python.
   license: MIT
   license_file: LICENSE
