@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - hatchling
+    - hatchling <=1.10.0
     - hatch-fancy-pypi-readme
     - pip
     - python >=3.8
