@@ -1,11 +1,11 @@
-About pytermgui
-===============
+About pytermgui-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytermgui-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/bczsalba/pytermgui
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytermgui-feedstock/blob/main/LICENSE.txt)
 
 Summary: A simple and robust terminal UI library, written in Python.
 
