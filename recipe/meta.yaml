@@ -41,6 +41,8 @@ test:
   requires:
     - pip
     - pytest
+    - pyyaml
+    - testfixtures
 
 about:
   home: https://github.com/bczsalba/pytermgui
