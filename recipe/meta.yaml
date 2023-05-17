@@ -19,12 +19,17 @@ build:
 
 requirements:
   host:
+    - hatchling
+    - hatch-fancy-pypi-readme
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - python >=3.7
+    - python >=3.8
+    - typing_extensions
 
 test:
+  source_files:
+    - tests
   imports:
     - pytermgui
     - pytermgui.widgets
@@ -32,8 +37,10 @@ test:
   commands:
     - pip check
     - ptg --help
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/bczsalba/pytermgui
