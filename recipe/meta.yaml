@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - hatchling
+    - hatchling >=1.26.1
     - hatch-fancy-pypi-readme
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - typing_extensions
     - wcwidth
 
@@ -44,6 +44,7 @@ test:
     - pytest
     - pyyaml
     - testfixtures
+    - python {{ python_min }}
 
 about:
   home: https://github.com/bczsalba/pytermgui
