@@ -1,5 +1,5 @@
 {% set name = "pytermgui" %}
-{% set version = "7.7.2" %}
+{% set version = "7.7.3" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytermgui-{{ version }}.tar.gz
-  sha256: 2bf245ce0f7fe39ca4b37ec58246ef1a8fa5283bfe4a7c7d63ce09ea4bcc4643
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pytermgui-{{ version }}.tar.gz
+  sha256: a79bc2b858424051c9a640a3353d57fd854c7d7073a0cae1989eb4196a4380e7
 
 build:
   number: 0
@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - hatchling
+    - hatchling >=1.26.1
     - hatch-fancy-pypi-readme
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - typing_extensions
     - wcwidth
 
@@ -44,6 +44,7 @@ test:
     - pytest
     - pyyaml
     - testfixtures
+    - python {{ python_min }}
 
 about:
   home: https://github.com/bczsalba/pytermgui
