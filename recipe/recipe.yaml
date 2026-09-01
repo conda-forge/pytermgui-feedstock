@@ -1,0 +1,60 @@
+schema_version: 1
+
+context:
+  name: pytermgui
+  version: "7.8.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/pytermgui-${{ version }}.tar.gz
+  sha256: c4cea2e9a0e7b7900f47989278e9f3b88eddd6e6319df198d91484b6311d2368
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - ptg = pytermgui.cmd:main
+
+requirements:
+  host:
+    - hatchling >=1.26.1
+    - hatch-fancy-pypi-readme
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }}
+    - typing_extensions
+    - wcwidth >=0.5
+
+tests:
+  - python:
+      imports:
+        - pytermgui
+        - pytermgui.widgets
+        - pytermgui.window_manager
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}
+    script:
+      - ptg --help
+
+about:
+  summary: A simple and robust terminal UI library, written in Python.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/bczsalba/pytermgui
+  documentation: ptg.bczsalba.com/pytermgui.html
+
+extra:
+  recipe-maintainers:
+    - thewchan
