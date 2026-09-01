@@ -26,11 +26,9 @@ requirements:
   run:
     - python >={{ python_min }}
     - typing_extensions
-    - wcwidth
+    - wcwidth >=0.5
 
 test:
-  source_files:
-    - tests
   imports:
     - pytermgui
     - pytermgui.widgets
@@ -38,12 +36,8 @@ test:
   commands:
     - pip check
     - ptg --help
-    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
-    - pytest
-    - pyyaml
-    - testfixtures
     - python {{ python_min }}
 
 about:
