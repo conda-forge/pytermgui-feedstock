@@ -9,7 +9,7 @@ Package license: MIT
 
 Summary: A simple and robust terminal UI library, written in Python.
 
-Documentation: ptg.bczsalba.com/pytermgui.html
+Documentation: https://ptg.bczsalba.com/
 
 Current build status
 ====================
