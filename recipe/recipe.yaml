@@ -53,7 +53,7 @@ about:
   license: MIT
   license_file: LICENSE
   homepage: https://github.com/bczsalba/pytermgui
-  documentation: ptg.bczsalba.com/pytermgui.html
+  documentation: https://ptg.bczsalba.com/
 
 extra:
   recipe-maintainers:
