@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pytermgui
-  version: "7.8.0"
+  version: "7.8.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/pytermgui-${{ version }}.tar.gz
-  sha256: c4cea2e9a0e7b7900f47989278e9f3b88eddd6e6319df198d91484b6311d2368
+  sha256: 4a80478f8540c4a2e936f967af970c0f0681656d314213b173fecb627b6388c3
 
 build:
   number: 0
